@@ -2,20 +2,23 @@
 
 <head>
 	<title>NBA</title>
-	<script language="javascript" type="text/javascript"
-	src="d3.v3.min.js"></script>
+	<script language="javascript" type="text/javascript" src="d3.v3.min.js"></script>
+	Access-Control-Allow-Origin: *
 </head>
 
 <body>
 
 	<script type="text/javascript">
+		var dataCsv = d3.csv('data.csv',function(err,data){
+						console.log(data);
+						});
 
-		var dataX = [100,200,400];
-		var dataY = [100,200,400];
+		var dataX = dataCsv.variable1;
+		var dataY = dataCsv.wins;
 		var data = dataX.map((el, index)=> [el, dataY[index]]);
 		var circleRadius = 5;
 		var width = Math.max(...dataX)+(circleRadius*2);
-		var height = Math.max(...dataY)+(circleRadius*2);
+		var height = Math.max(...dataY)+(circleRadius*2);	
 
 		var xScale = d3.scale.linear()
 						.domain([0,width])
