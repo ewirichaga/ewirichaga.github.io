@@ -12,12 +12,12 @@
 			console.log(d); 
 			
 			var dataX = [];
+			var dataY
 			for(i=0; i < d.length; i++){
 				dataX.push(d[i].variable1);
+				dataY.push(d[i].wins);
 			}
-
-			var dataY = d[0].wins;
-			console.log(dataX);
+			
 			var data = dataX.map((el, index)=> [el, dataY[index]]);
 			var circleRadius = 5;
 			var width = Math.max(...dataX)+(circleRadius*2);
