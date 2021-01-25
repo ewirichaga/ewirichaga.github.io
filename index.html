@@ -8,10 +8,10 @@
 <body>
 
 	<script type="text/javascript">
-		d3.csv('data.csv',function(err,data){
-			console.log(data); 
-			var dataX = data["variable1"];
-			var dataY = data["wins"];
+		d3.csv('data.csv',function(err,d){
+			console.log(d); 
+			var dataX = d["variable1"][0];
+			var dataY = d["wins"][0];
 			console.log(dataX);
 			var data = dataX.map((el, index)=> [el, dataY[index]]);
 			var circleRadius = 5;
