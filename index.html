@@ -10,7 +10,12 @@
 	<script type="text/javascript">
 		d3.csv('data.csv',function(err,d){
 			console.log(d); 
-			var dataX = d[0].team;
+			
+			var dataX;
+			for(i=0; i < d.length; i++){
+				dataX.push(d[i].variable1);
+			}
+			
 			var dataY = d[0].wins;
 			console.log(dataX);
 			var data = dataX.map((el, index)=> [el, dataY[index]]);
