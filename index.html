@@ -11,7 +11,7 @@
 		d3.csv('data.csv',function(err,data){
 			console.log(data); 
 			var dataX = data["variable1"];
-			var dataY = dataCsv["wins"];
+			var dataY = data["wins"];
 			console.log(dataX);
 			var data = dataX.map((el, index)=> [el, dataY[index]]);
 			var circleRadius = 5;
