@@ -9,8 +9,9 @@
 
 	<script type="text/javascript">
 		var dataCsv = d3.csv('data.csv',function(err,data){});
-		var dataX = dataCsv["variable1"];
-		var dataY = dataCsv["wins"];
+		var dataX = dataCsv[2];
+		var dataY = dataCsv[1];
+		console.log(dataX);
 		var data = dataX.map((el, index)=> [el, dataY[index]]);
 		var circleRadius = 5;
 		var width = Math.max(...dataX)+(circleRadius*2);
