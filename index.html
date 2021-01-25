@@ -8,7 +8,7 @@
 <body>
 
 	<script type="text/javascript">
-		var dataCsv = d3.csv('data.csv',function(err,data){ return data; });
+		var dataCsv = d3.csv('data.csv',function(err,data){ return {team: data.team, variable1: data.wins, wins: data.wins}; });
 		console.log(dataCsv);
 		var dataX = dataCsv["variable1"][0];
 		var dataY = dataCsv[1];
