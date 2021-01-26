@@ -57,7 +57,7 @@
 			var xAxis = d3.svg.axis() //se definen propiedades de axis de X
 							.scale(xScale)
 							.ticks(5)
-							.tickSize(0.1)
+							.tickSize(0.5)
 
 			var yScale = d3.scale.linear() //se crea escala de Y con dominio de valores Y y rango ajustado al canvas
 							.domain([minY,maxY])
@@ -67,7 +67,7 @@
 							.scale(yScale)
 							.orient("left")
 							.ticks(5)
-							.tickSize(0.1)
+							.tickSize(0.5)
 
 			var canvas = d3.select("body") //se crea canvas en grupo "g" con dimensiones especificadas por height y width
 						.append("svg")
